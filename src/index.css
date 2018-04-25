@@ -48,3 +48,8 @@ button:active {
   padding: 10px;
   box-shadow: 2px 4px;
 }
+
+.textFieldDiv {
+  position: relative;
+  margin-top: 20px;
+}
