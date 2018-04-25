@@ -7,7 +7,6 @@ class Login extends React.Component {
     this.state = {
       loginStatus: false
     }
-    // this.loggedIn = "Click to login";
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick(event) {
@@ -19,11 +18,9 @@ class Login extends React.Component {
     let btnText,
       divText;
     if (!this.state.loginStatus) {
-      // this.setState({loginStatus: true})
       btnText = "Login";
       divText = "You are logged out";
     } else {
-      // this.setState({loginStatus: false})
       btnText = "Logout";
       divText = "You are logged in";
     }
