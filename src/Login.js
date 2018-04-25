@@ -7,20 +7,30 @@ class Login extends React.Component {
     this.state = {
       loginStatus: false
     }
-    this.loggedIn = "Click to login";
+    // this.loggedIn = "Click to login";
     this.handleClick = this.handleClick.bind(this);
   }
-  handleClick() {
-    if (!this.state.loginStatus) {
-      this.setState({loginStatus: true})
-      this.loggedIn = "You are logged in";
-    } else {
-      this.setState({loginStatus: false})
-      this.loggedIn = "You are logged out";
-    }
+  handleClick(event) {
+    this.setState({
+      loginStatus: !this.state.loginStatus
+    })
   }
   render() {
-    return (<button onClick={this.handleClick}>{this.loggedIn}</button>)
+    let btnText,
+      divText;
+    if (!this.state.loginStatus) {
+      // this.setState({loginStatus: true})
+      btnText = "Login";
+      divText = "You are logged out";
+    } else {
+      // this.setState({loginStatus: false})
+      btnText = "Logout";
+      divText = "You are logged in";
+    }
+    return (<div>
+      <button onClick={this.handleClick}>{btnText}</button><br/>
+      <div className="divText">{divText}</div>
+    </div>)
   }
 }
 
