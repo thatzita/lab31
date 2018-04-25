@@ -9,7 +9,6 @@ class TextField extends React.Component {
     this.changeValue = this.changeValue.bind(this);
   }
   changeValue() {
-    console.log(this.state.enabledOrNot)
     if (this.state.enabledOrNot === "disabled") {
       this.setState({enabledOrNot: ""})
     } else {
@@ -17,7 +16,6 @@ class TextField extends React.Component {
     }
   }
   render() {
-
     return (<div className="textFieldDiv">
       <input type="checkbox" onClick={this.changeValue}/>
       <input type="text" disabled={this.state.enabledOrNot}/>
