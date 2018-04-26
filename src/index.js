@@ -8,11 +8,6 @@ import TextField from './TextField'
 import Backwards from './Backwards'
 import GuessingGame from './GuessingGame'
 
-ReactDOM.render(<div>
-  <Tab/>
-  <Login/>
-  <TextField/>
-  <Backwards/>
-  <GuessingGame/>
-</div>, document.getElementById('root'));
+ReactDOM.render(
+  <Tab/>, document.getElementById('root'));
 registerServiceWorker();
