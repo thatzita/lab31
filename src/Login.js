@@ -1,5 +1,5 @@
 import React from 'react';
-import Tab from "./Tab"
+// import Tab from "./Tab"
 
 // let loggedIn = "You are logged out";
 
@@ -16,7 +16,6 @@ class Login extends React.Component {
       loginStatus: !this.state.loginStatus
     })
   }
-
 
   render() {
     let btnText,
