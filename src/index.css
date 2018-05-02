@@ -51,33 +51,48 @@ button:active {
 
 .textFieldDiv {
   position: relative;
-  margin-top: 20px;
+  margin-top: 50px;
+  border: 1px solid black;
+  padding: 0 25px;
+  padding-bottom: 25px;
+  box-shadow: 2px 4px;
 }
 
-ul{
+.radioBtn {
+  position: relative;
+  margin-right: 15px;
+  -webkit-transform: scale(2.5);
+  transform: scale(2.5);
+}
+
+.inputField {
+  width: 200px;
+  height: 30px;
+  font-size: 2em;
+}
+
+ul {
   list-style: none;
-  margin:0;
+  margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
 }
 
-li{
-  width:300px;
+li {
+  width: 300px;
   background: ;
-  color:rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
-  background: rgba(0,0,0,0.6);
-  padding:10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
   text-align: center;
-  box-shadow:inset 0px 0px 10px ;
+  box-shadow: inset 0px 0px 10px;
 }
 
-
-.currentState{
+.currentState {
   margin: auto;
   width: 50%;
   justify-content: center;
   display: flex;
-
 }
