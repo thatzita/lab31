@@ -67,7 +67,7 @@ class Tab extends React.Component {
       <div>
         <ul>
           <li onClick={ e => this.componentSwitcher("Login")}>Log in</li>
-          <li onClick={ e => this.componentSwitcher("Text")}>Text field</li>
+          <li onClick={ e => this.componentSwitcher("Text")}>Textfield</li>
           <li onClick={ e => this.componentSwitcher("Back")}>Backwards</li>
           <li onClick={ e => this.componentSwitcher("Guess")}>Guessing game</li>
         </ul>
