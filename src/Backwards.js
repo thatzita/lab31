@@ -3,9 +3,12 @@ import React from 'react';
 class Backwards extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''
+    this.state = {
+      value: '',
+      shifting: 1,
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleChangeInput = this.handleChangeInput.bind(this);
   }
   handleChange(event) {
     let alfabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
@@ -14,6 +17,8 @@ class Backwards extends React.Component {
     "Å","Ä","Ö"];
 
     let newValue;
+    console.log(typeof Number(this.state.shifting))
+
     for(let i=0; i< alfabet.length; i++){
         if(event.key === "ö"){
           newValue = "a"
@@ -24,7 +29,7 @@ class Backwards extends React.Component {
           this.setState({value: this.state.value + newValue});
           break;
         }else if(event.key === alfabet[i]){
-        newValue = alfabet[i+1]
+        newValue = alfabet[i+Number(this.state.shifting)]
         this.setState({value: this.state.value + newValue});
         break;
       }else if(event.keyCode === 32){
@@ -35,10 +40,16 @@ class Backwards extends React.Component {
       }
     }
  }
+ handleChangeInput(event){
+   this.setState({
+     shifting: event.target.value
+   })
+ }
   render() {
     return (
       <div>
         <h3>Magic text. Write and see what happens</h3>
+        <input type="text" onChange={this.handleChangeInput}/>
         <textarea  value={this.state.value} onKeyDown={this.handleChange} />
       </div>)
   }
