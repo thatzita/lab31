@@ -73,7 +73,7 @@ class Tab extends React.Component {
         </ul>
 
 
-        <div class="currentState">
+        <div className="currentState">
           {this.state.val}
         </div>
 
