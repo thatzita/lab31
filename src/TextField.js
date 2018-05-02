@@ -17,6 +17,7 @@ class TextField extends React.Component {
   }
   render() {
     return (<div className="textFieldDiv">
+      <h3>Enable or disable the textfield.</h3>
       <input type="checkbox" onClick={this.changeValue}/>
       <input type="text" disabled={this.state.enabledOrNot}/>
     </div>)

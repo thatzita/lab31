@@ -26,7 +26,11 @@ class Backwards extends React.Component {
     }
  }
   render() {
-    return (<textarea  value={this.state.value} onKeyDown={this.handleChange} />)
+    return (
+      <div>
+        <h3>Magic text. Write and see what happens</h3>
+        <textarea  value={this.state.value} onKeyDown={this.handleChange} />
+      </div>)
   }
 }
 
