@@ -22,17 +22,15 @@ class GuessingGame extends React.Component {
     })
 
     if (this.state.nr === Number(val)) {
-      console.log("räääättt")
       this.setState({
-        underHogre: "RÄTT DU ÄR SOM JOHAN!!!!! <3 Talet var Johan nej jag skojar bara. Talet är " + this.state.nr + " Det tog dig " + this.state.guess + " gissningar",
+        underHogre: "Rätt! " + this.state.nr + " Det tog dig " + this.state.guess + " gissningar!",
         nr: Math.floor(Math.random() * 100 + 1),
         guess: 0
       })
-    } else if (this.state.nr < Number(val)) {
-      console.log("feeel")
-      this.setState({underHogre: "Feel du måste gissa lägre!!!!!"})
+    }else if (this.state.nr < Number(val)) {
+      this.setState({underHogre: "Fel, gissa lägre."})
     } else if (this.state.nr > Number(val)) {
-      this.setState({underHogre: "Fel du måste gissa hööögre som Johan!!!!!"})
+      this.setState({underHogre: "Fel, gissa högre."})
     }
   }
 
@@ -42,15 +40,9 @@ class GuessingGame extends React.Component {
 
   render() {
 
-    // let message = ""
-    // if (this.state.underHogre === "") {
-    //   message = ""
-    // }
-
     return (<div>
       <h2>Gissa på talet mellan 1 och 100</h2>
-      <h2>Du har gissat {this.state.guess}
-        gånger</h2>
+      <h2>Du har gissat {this.state.guess} gånger</h2>
       <h2>{this.state.underHogre}</h2>
       <input type="text" value={this.state.value} onChange={this.handleChange}/>
       <button onClick={e => this.guessNumber(this.state.value)}>Gissa!</button>
